@@ -12,9 +12,11 @@ namespace Kassa
         {
             int i, j;
 
+            Console.Write(" |");
             for (i = 1; i <= 3; i++)
             {
-                Console.Write("  " + i);
+                
+                Console.Write(i + "  ");
 
             }
             Console.Write('\n');
