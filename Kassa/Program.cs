@@ -24,7 +24,8 @@ namespace Kassa
                 Console.Write(i + "|");
                 for (j = 1; j <= 3; j++)
                 {
-                    Console.Write(j * i + "  ");
+                        Console.Write(j * i + "  ");
+                    
                     if (j == 3)
                     {
                         Console.Write('\n');
