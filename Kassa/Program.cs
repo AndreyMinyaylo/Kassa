@@ -13,24 +13,29 @@ namespace Kassa
             int i, j;
 
             Console.Write(" |");
-            for (i = 1; i <= 3; i++)
+            for (i = 1; i <= 4; i++)
             {
-                
-                Console.Write(i + "  ");
+                Console.Write(" " + i + " ");
 
             }
-            Console.Write('\n');
-            Console.WriteLine("-+--------");
-            for (i = 1; i <= 3; i++)
+            Console.Write("\n");
+            Console.Write("-+------------\n");
+            for (i = 1; i <= 4; i++)
             {
                 Console.Write(i + "|");
-                for (j = 1; j <= 3; j++)
+                for (j = 1; j <= 4; j++)
                 {
-                        Console.Write(j * i + "  ");
-                    
-                    if (j == 3)
+                    if ((j * i) <= 9)
                     {
-                        Console.Write('\n');
+                        Console.Write(" " + (j * i) + " ");
+                    }
+                    else
+                    {
+                        Console.Write((j * i) + " ");
+                    }
+                    if (j == 4)
+                    {
+                        Console.Write("\n");
                     }
 
                 }
