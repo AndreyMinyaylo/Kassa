@@ -12,7 +12,7 @@ namespace Kassa
         {
 
 
-            int i, j, s;
+            int i, j;
             string p = " ", p1 = "  ", p2 = "   ", p3 = "    ";
 
             Console.WriteLine("Enter x1:");
@@ -55,7 +55,17 @@ namespace Kassa
                 }
                 }
             Console.Write("\n");
-            Console.Write("----+-----------------------------------------\n");
+            Console.Write("----+");
+            string s = "----"; 
+
+            for (i = x1; i <= x2; i++)
+            {
+
+                Console.Write(s);
+                
+                
+            }
+            Console.Write('\n');
 
 
 
