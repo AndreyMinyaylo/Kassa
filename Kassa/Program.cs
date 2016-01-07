@@ -12,8 +12,8 @@ namespace Kassa
         {
 
 
-            int i, j;
-            string p = " ", p1 = "  ", p2 = "   ", p3 = "    ";
+            int i, j, h;
+            
 
             Console.WriteLine("Enter x1:");
             int x1 = Convert.ToInt32(Console.ReadLine());
@@ -36,82 +36,165 @@ namespace Kassa
             {
                 Console.Write(p1 + "|");
             }*/
-
+            string p = " ", p1 = "  ", p2 = "   ", p3 = "    ";
             Console.Write(p3 + "|");
 
-            for (i = x1; i <= x2; i++)
-            {
-                if (i < 10)
+            
+                for (i = x1; i <= x2; i++)
                 {
-                    Console.Write(p2 + i);
+                h = x2 * y2;
+
+                if (h < 10)
+                {
+                    if(i < 10)
+                    {
+                        Console.Write(p3 + i);
+                    }
+                    
                 }
-                else if (i < 100)
+                else if (h < 100)
+                {
+                    if (i < 100)
+                    {
+                        Console.Write(p2 + i);
+                    }
+                    
+                }
+                else if (h < 1000)
+                {
+                    if (i < 10)
+                    {
+                        Console.Write(p2 + i);
+                    }
+                    else if (i < 100)
                     {
                         Console.Write(p1 + i);
                     }
-                else if(i < 1000)
+                    else if (i < 1000)
+                    {
+                        Console.Write(p + i);
+                    }
+                    
+                }
+              else if(h < 10000)
+                    {
+                    if (i < 10)
+                    {
+                        Console.Write(p3 + i);
+                    }
+                    else if (i < 100)
+                    {
+                        Console.Write(p + i);
+                    }
+                    else
+                    {
+                        Console.Write(p2 + i);
+                    }
+                     }
+                else if (h < 100000)
                 {
-                    Console.Write(p + i);
+                    if (i < 100)
+                    {
+                        Console.Write(p3 + i);
+                    }
+                    else
+                    {
+                        Console.Write(p2 + i);
+                    }
                 }
-                }
-            Console.Write("\n");
-            Console.Write("----+");
-            string s = "----"; 
 
-            for (i = x1; i <= x2; i++)
-            {
-
-                Console.Write(s);
-                
-                
             }
-            Console.Write('\n');
 
+            
 
+            Console.Write("\n");
+                Console.Write("----+");
+            string t = "-------";
+            string s = "----";
+            string o = "-----";
+            string e = "------";
 
-            for (i = y1; i <= y2; i++)
-            {
-                if (i < 10)
+                for (i = x1; i <= x2; i++)
                 {
-                    Console.Write(p2 + i + "|");
+                h = x2 * y2;
+                        
+                            {
+                                 if(h <= 100)
+                                {
+                                    Console.Write(s);
+                                }
+                                 else if (h <= 1000)
+                                    {
+                                            Console.Write(o);
+                                    }
+                                 
+                                 else if (h <= 10000)
+                                    {
+                                        Console.Write(e);
+                                    }
+                                 else if (h <= 100000)
+                                    {
+                                        Console.Write(e);
+                                    }
+
                 }
-                else if (i < 100)
-                {
-                    Console.Write(p1 + i + "|");
-                }
-                else if (i < 1000)
-                {
-                    Console.Write(p + i + "|");
-                }
-                /*if (j == y2)
-                {
-                    Console.Write("\n");
-                }*/
+            }
+                Console.Write('\n');
 
-               for (j = x1; j <= x2; j++)
+
+
+                for (i = y1; i <= y2; i++)
                 {
-                    if ((j * i) <= 9)
+                    if (i < 10)
                     {
-                        Console.Write(p2 + (j * i));
+                        Console.Write(p2 + i + "|");
                     }
-                    else if((j*i) < 100)
+                    else if (i < 100)
                     {
-                        Console.Write(p1 + (j * i));
+                        Console.Write(p1 + i + "|");
                     }
-                    else if((j*i) < 1000)
+                    else if (i < 1000)
+                    {
+                        Console.Write(p + i + "|");
+                    }
+                    /*if (j == y2)
+                    {
+                        Console.Write("\n");
+                    }*/
+                    
+
+                    for (j = x1; j <= x2; j++)
+                    {
+                        if ((j * i) <= 9)
+                        {
+                            Console.Write(p2 + (j * i));
+                        }
+                        else if ((j * i) < 100)
+                        {
+                            Console.Write(p1 + (j * i));
+                        }
+                        else if ((j * i) < 1000)
+                        {
+                            Console.Write(p + (j * i));
+                        }
+                        else if ((j * i) < 10000)
+                        {
+                            Console.Write(p1 + (j * i));
+                        }
+                    else if ((j * i) >= 10000)
                     {
                         Console.Write(p + (j * i));
                     }
                     if (j == x2)
-                    {
-                        Console.Write("\n");
+                        {
+                            Console.Write("\n");
+                        }
                     }
+
                 }
-                
+
+
+                Console.ReadKey();
             }
-            
-           
-            Console.ReadKey();
         }
     }
-}
