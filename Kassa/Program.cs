@@ -20,7 +20,7 @@ namespace Kassa
             Console.WriteLine("Enter y2:");
             var y2 = Convert.ToInt32(Console.ReadLine());
 
-            int i, j, h, u, s;
+            int i, j;
 
             
             var lenthY2 = Convert.ToString(y2);
@@ -35,22 +35,22 @@ namespace Kassa
                 for (i = x1; i <= x2; i++)
                 {
                   var k = Convert.ToString(i);
-                    s = k.Length;
-                    h = x2 * y2;
-                var l = Convert.ToString(h);
-                u = l.Length;
-                    if (u == s )
+                  var LenghtString = k.Length;
+                    var productColumn = x2 * y2;
+                var l = Convert.ToString(productColumn);
+                var LenghtColumn = l.Length;
+                    if (LenghtColumn == LenghtString)
                     {
-                        u = 1;
+                    LenghtColumn = 1;
                     }
-                    else if (s < u)
+                    else if (LenghtString < LenghtColumn)
                     {
-                        u = (u - s) + 1;
+                    LenghtColumn = (LenghtColumn - LenghtString) + 1;
                     }
-                while (u > 0) 
+                while (LenghtColumn > 0) 
                 {
                     Console.Write(" ");
-                    u--;
+                    LenghtColumn--;
                     }
                 
                     Console.Write(i);
@@ -67,14 +67,14 @@ namespace Kassa
             Console.Write("+");
             for (i = x1; i <= x2; i++)
             {
-                h = x2 * y2;
-                var l = Convert.ToString(h);
-                u = l.Length + 1;
+                var productEndVar = x2 * y2;
+                var l = Convert.ToString(productEndVar);
+                var LenghtproductEndVar  = l.Length + 1;
 
-                while (u > 0)
+                while (LenghtproductEndVar > 0)
                 {
                     Console.Write("-");
-                    u--;
+                    LenghtproductEndVar--;
                 }
                 
             }
@@ -104,23 +104,23 @@ namespace Kassa
                 {
                     var t = i * j;
                     var k = Convert.ToString(t);
-                    s = k.Length;
-                    h = x2 * y2;
-                    var l = Convert.ToString(h);
-                    u = l.Length;
-                   if (s == u)
+                    var product = k.Length;
+                    var productColumn = x2 * y2;
+                    var l = Convert.ToString(productColumn);
+                    var lenghtproductEndVar = l.Length;
+                   if (product == lenghtproductEndVar)
                     {
-                        u =  1;
+                        lenghtproductEndVar =  1;
                     }
-                    else if(s < u)
+                    else if(product < lenghtproductEndVar)
                     {
-                        u = (u - s)+1;
+                        lenghtproductEndVar = (lenghtproductEndVar - product) +1;
                     }
 
-                    while (u > 0)
+                    while (lenghtproductEndVar > 0)
                     {
                             Console.Write(" ");
-                            u--;
+                        lenghtproductEndVar--;
                     }
                     
                         Console.Write(t);
