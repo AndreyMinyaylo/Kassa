@@ -12,33 +12,32 @@ namespace Kassa
         {
 
             Console.WriteLine("Enter x1:");
-            int x1 = Convert.ToInt32(Console.ReadLine());
+            var x1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter x2:");
-            int x2 = Convert.ToInt32(Console.ReadLine());
+            var x2 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter y1:");
-            int y1 = Convert.ToInt32(Console.ReadLine());
+            var y1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter y2:");
-            int y2 = Convert.ToInt32(Console.ReadLine());
+            var y2 = Convert.ToInt32(Console.ReadLine());
 
-            int i, j, h, u, t, s, ss, ll;
+            int i, j, h, u, s;
 
-            string p = " ";
-            string o = "-";
-            string rrr = Convert.ToString(y2);
-            ll = rrr.Length + 1;
-            do
+            
+            var lenthY2 = Convert.ToString(y2);
+            var lenth = lenthY2.Length + 1;
+            while (lenth > 0)
             {
-                Console.Write(p);
-                ll--;
+                Console.Write(" ");
+                lenth--;
             }
-            while (ll > 0);
+            
             Console.Write("|");
                 for (i = x1; i <= x2; i++)
                 {
-                  string k = Convert.ToString(i);
+                  var k = Convert.ToString(i);
                     s = k.Length;
                     h = x2 * y2;
-                string l = Convert.ToString(h);
+                var l = Convert.ToString(h);
                 u = l.Length;
                     if (u == s )
                     {
@@ -48,66 +47,66 @@ namespace Kassa
                     {
                         u = (u - s) + 1;
                     }
-                     do
-                    {
-                    Console.Write(p);
+                while (u > 0) 
+                {
+                    Console.Write(" ");
                     u--;
                     }
-                while (u > 0);
+                
                     Console.Write(i);
                     }
             Console.Write("\n");
-            string rr = Convert.ToString(y2);
-            ll = rr.Length+1;
-            do
+            var lenthHorizont = Convert.ToString(y2);
+            lenth = lenthHorizont.Length+1;
+            while (lenth > 0)
             {
-                Console.Write(o);
-                ll--;
+                Console.Write("-");
+                lenth--;
             }
-            while (ll > 0);
+            
             Console.Write("+");
             for (i = x1; i <= x2; i++)
             {
                 h = x2 * y2;
-                string l = Convert.ToString(h);
+                var l = Convert.ToString(h);
                 u = l.Length + 1;
 
-                do
+                while (u > 0)
                 {
-                    Console.Write(o);
+                    Console.Write("-");
                     u--;
                 }
-                while (u > 0);
+                
             }
             Console.Write("\n");
             for (i = y1; i <= y2; i++)
             {
-                string c = Convert.ToString(i);
-                ss = c.Length;
-                string r = Convert.ToString(y2);
-                ll = r.Length;
-                if (ss == ll)
+                var c = Convert.ToString(i);
+               var lenthI = c.Length;
+                var r = Convert.ToString(y2);
+                lenth = r.Length;
+                if (lenthI == lenth)
                 {
-                    ll = 1;
+                    lenth = 1;
                 }
-                else if (ss < ll)
+                else if (lenthI < lenth)
                 {
-                    ll = (ll - ss) + 1;
+                    lenth = (lenth - lenthI) + 1;
                 }
-                do
+                while (lenth > 0)
                 {
-                    Console.Write(p);
-                    ll--;
+                    Console.Write(" ");
+                    lenth--;
                 }
-                while (ll > 0);
+                
                 Console.Write(i+"|");
                 for (j = x1; j <= x2; j++)
                 {
-                    t = i * j;
-                    string k = Convert.ToString(t);
+                    var t = i * j;
+                    var k = Convert.ToString(t);
                     s = k.Length;
                     h = x2 * y2;
-                    string l = Convert.ToString(h);
+                    var l = Convert.ToString(h);
                     u = l.Length;
                    if (s == u)
                     {
@@ -117,13 +116,13 @@ namespace Kassa
                     {
                         u = (u - s)+1;
                     }
-                    
-                        do
+
+                    while (u > 0)
                     {
-                            Console.Write(p);
+                            Console.Write(" ");
                             u--;
                     }
-                    while (u > 0);
+                    
                         Console.Write(t);
 
                     if (j == x2)
