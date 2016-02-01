@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pifagor", "Kassa\Pifagor.csproj", "{38C24F7D-1990-4E3F-BCCD-4BE473B5F50E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pifagor", "Pifagor\Pifagor.csproj", "{38C24F7D-1990-4E3F-BCCD-4BE473B5F50E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Pifagor", "Test_Pifagor\Test_Pifagor.csproj", "{813A9E52-285F-4767-9D6A-4F0C9AB96527}"
 EndProject
