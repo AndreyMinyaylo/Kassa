@@ -12,19 +12,18 @@ namespace Pifagor
         {
 
             Console.WriteLine("Enter x1:");
-            var x1 = Convert.ToInt32(Console.ReadLine());
+            var firstNumber = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter x2:");
-            var x2 = Convert.ToInt32(Console.ReadLine());
+            var secondNumber = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter y1:");
-            var y1 = Convert.ToInt32(Console.ReadLine());
+            var thirdNumber = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter y2:");
-            var y2 = Convert.ToInt32(Console.ReadLine());
+            var fourthNumber = Convert.ToInt32(Console.ReadLine());
 
             int i, j;
 
             
-            var lenthY2 = Convert.ToString(y2);
-            var lenth = lenthY2.Length + 1;
+            var lenth = Convert.ToString(fourthNumber).Length + 1;
             while (lenth > 0)
             {
                 Console.Write(" ");
@@ -32,13 +31,11 @@ namespace Pifagor
             }
             
             Console.Write("|");
-                for (i = x1; i <= x2; i++)
+                for (i = firstNumber; i <= secondNumber; i++)
                 {
-                  var k = Convert.ToString(i);
-                  var LenghtString = k.Length;
-                    var productColumn = x2 * y2;
-                var l = Convert.ToString(productColumn);
-                var LenghtColumn = l.Length;
+                  var LenghtString = Convert.ToString(i).Length;
+                  var productColumn = secondNumber * fourthNumber;
+                  var LenghtColumn = Convert.ToString(productColumn).Length;
                     if (LenghtColumn == LenghtString)
                     {
                     LenghtColumn = 1;
@@ -56,21 +53,18 @@ namespace Pifagor
                     Console.Write(i);
                     }
             Console.Write("\n");
-            var lenthHorizont = Convert.ToString(y2);
-            lenth = lenthHorizont.Length+1;
-            while (lenth > 0)
+            var lenthHorizont = Convert.ToString(fourthNumber).Length + 1;
+            while (lenthHorizont > 0)
             {
                 Console.Write("-");
-                lenth--;
+                lenthHorizont--;
             }
             
             Console.Write("+");
-            for (i = x1; i <= x2; i++)
+            for (i = firstNumber; i <= secondNumber; i++)
             {
-                var productEndVar = x2 * y2;
-                var l = Convert.ToString(productEndVar);
-                var LenghtproductEndVar  = l.Length + 1;
-
+                var productEndVar = secondNumber * fourthNumber;
+                var LenghtproductEndVar = Convert.ToString(productEndVar).Length + 1;
                 while (LenghtproductEndVar > 0)
                 {
                     Console.Write("-");
@@ -79,36 +73,32 @@ namespace Pifagor
                 
             }
             Console.Write("\n");
-            for (i = y1; i <= y2; i++)
+            for (i = thirdNumber; i <= fourthNumber; i++)
             {
-                var c = Convert.ToString(i);
-               var lenthI = c.Length;
-                var r = Convert.ToString(y2);
-                lenth = r.Length;
-                if (lenthI == lenth)
+                var lenthI = Convert.ToString(i).Length;
+                var lenthForNumber = Convert.ToString(fourthNumber).Length;
+                if (lenthI == lenthForNumber)
                 {
-                    lenth = 1;
+                    lenthForNumber = 1;
                 }
-                else if (lenthI < lenth)
+                else if (lenthI < lenthForNumber)
                 {
-                    lenth = (lenth - lenthI) + 1;
+                    lenthForNumber = (lenthForNumber - lenthI) + 1;
                 }
-                while (lenth > 0)
+                while (lenthForNumber > 0)
                 {
                     Console.Write(" ");
-                    lenth--;
+                    lenthForNumber--;
                 }
                 
                 Console.Write(i+"|");
-                for (j = x1; j <= x2; j++)
+                for (j = firstNumber; j <= secondNumber; j++)
                 {
-                    var t = i * j;
-                    var k = Convert.ToString(t);
-                    var product = k.Length;
-                    var productColumn = x2 * y2;
-                    var l = Convert.ToString(productColumn);
-                    var lenghtproductEndVar = l.Length;
-                   if (product == lenghtproductEndVar)
+                    var Result = i * j;
+                    var product = Convert.ToString(Result).Length;
+                    var productColumn = secondNumber * fourthNumber;
+                    var lenghtproductEndVar = Convert.ToString(productColumn).Length;
+                    if (product == lenghtproductEndVar)
                     {
                         lenghtproductEndVar =  1;
                     }
@@ -123,9 +113,9 @@ namespace Pifagor
                         lenghtproductEndVar--;
                     }
                     
-                        Console.Write(t);
+                        Console.Write(Result);
 
-                    if (j == x2)
+                    if (j == secondNumber)
                     {
                         Console.Write("\n");
                     }
