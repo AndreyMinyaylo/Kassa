@@ -54,7 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Kassa\Pifagor.csproj">
+    <ProjectReference Include="..\Pifagor\Pifagor.csproj">
       <Project>{38c24f7d-1990-4e3f-bccd-4be473b5f50e}</Project>
       <Name>Pifagor</Name>
     </ProjectReference>
