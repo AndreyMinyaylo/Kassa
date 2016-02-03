@@ -11,13 +11,13 @@ namespace Pifagor
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter x1:");
+            Console.WriteLine("Enter the first number of the horizontal array of Pythagoras:");
             var firstNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter x2:");
+            Console.WriteLine("Enter the last number of the horizontal array of Pythagoras:");
             var secondNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter y1:");
+            Console.WriteLine("Enter the first number of a vertical array of Pythagoras:");
             var thirdNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter y2:");
+            Console.WriteLine("Enter the last number of vertical array of Pythagoras:");
             var fourthNumber = Convert.ToInt32(Console.ReadLine());
 
             int i, j;
