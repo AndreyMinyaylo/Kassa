@@ -22,35 +22,35 @@ namespace Test_100
                      "  9|   9  18  27  36  45  54  63  72  81  90\n" +
                      " 10|  10  20  30  40  50  60  70  80  90 100\n";
 
-            string sr = string.Empty;
+            var sr = string.Empty;
 
-            int i, j, s;
+            int i, j;
 
-            var lenth = Convert.ToString(10).Length + 1;
-            while (lenth > 0)
+            var space = Convert.ToString(10).Length + 1;
+            while (space > 0)
             {
                 sr = sr + (" ");
-                lenth--;
+                space--;
             }
 
             sr = sr + ("|");
             for (i = 1; i <= 10; i++)
             {
-                var LenghtString = Convert.ToString(i).Length;
-                var productColumn = 10 * 10;
-                var LenghtColumn = Convert.ToString(productColumn).Length;
-                if (LenghtColumn == LenghtString)
+                var lenghtI = Convert.ToString(i).Length;
+                var symbol = 10 * 10;
+                var symbolLenght = Convert.ToString(symbol).Length;
+                if (symbolLenght == lenghtI)
                 {
-                    LenghtColumn = 1;
+                    symbolLenght = 1;
                 }
-                else if (LenghtString < LenghtColumn)
+                else if (lenghtI < symbolLenght)
                 {
-                    LenghtColumn = (LenghtColumn - LenghtString) + 1;
+                    symbolLenght = (symbolLenght - lenghtI) + 1;
                 }
-                while (LenghtColumn > 0)
+                while (symbolLenght > 0)
                 {
                     sr = sr + (" ");
-                    LenghtColumn--;
+                    symbolLenght--;
                 }
 
                 sr = sr + (i);
@@ -66,12 +66,12 @@ namespace Test_100
             sr = sr + ("+");
             for (i = 1; i <= 10; i++)
             {
-                var productEndVar = 10 * 10;
-                var LenghtproductEndVar = Convert.ToString(productEndVar).Length + 1;
-                while (LenghtproductEndVar > 0)
+                var symbol = 10 * 10;
+                var symbolLenght = Convert.ToString(symbol).Length + 1;
+                while (symbolLenght > 0)
                 {
                     sr = sr + ("-");
-                    LenghtproductEndVar--;
+                    symbolLenght--;
                 }
 
             }
@@ -97,26 +97,26 @@ namespace Test_100
                 sr = sr + (i + "|");
                 for (j = 1; j <= 10; j++)
                 {
-                    var Result = i * j;
-                    var product = Convert.ToString(Result).Length;
-                    var productColumn = 10 * 10;
-                    var lenghtproductEndVar = Convert.ToString(productColumn).Length;
-                    if (product == lenghtproductEndVar)
+                    var result = i * j;
+                    var resultLenght = Convert.ToString(result).Length;
+                    var symbol = 10 * 10;
+                    var symbolLenght = Convert.ToString(symbol).Length;
+                    if (resultLenght == symbolLenght)
                     {
-                        lenghtproductEndVar = 1;
+                        symbolLenght = 1;
                     }
-                    else if (product < lenghtproductEndVar)
+                    else if (resultLenght < symbolLenght)
                     {
-                        lenghtproductEndVar = (lenghtproductEndVar - product) + 1;
+                        symbolLenght = (symbolLenght - resultLenght) + 1;
                     }
 
-                    while (lenghtproductEndVar > 0)
+                    while (symbolLenght > 0)
                     {
                         sr = sr + (" ");
-                        lenghtproductEndVar--;
+                        symbolLenght--;
                     }
 
-                    sr = sr + (Result);
+                    sr = sr + (result);
 
                     if (j == 10)
                     {
