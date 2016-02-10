@@ -8,18 +8,16 @@ namespace Pifagor
         {
 
             Console.WriteLine("Enter the first number (horizontal): ");
-            var firstNumber = Convert.ToInt32(Console.ReadLine());
+            var firstNumberHorizontal = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the last number (horizontal): ");
-            var secondNumber = Convert.ToInt32(Console.ReadLine());
+            var lastNumberHorizontal = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the first number (vertical): ");
-            var thirdNumber = Convert.ToInt32(Console.ReadLine());
+            var firstNumberVertical = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the last number (vertical): ");
-            var fourthNumber = Convert.ToInt32(Console.ReadLine());
+            var lastNumberVertical = Convert.ToInt32(Console.ReadLine());
 
-            int i, j;
 
-            
-            var space = Convert.ToString(fourthNumber).Length + 1;
+            var space = Convert.ToString(lastNumberVertical).Length + 1;
             while (space > 0)
             {
                 Console.Write(" ");
@@ -27,10 +25,10 @@ namespace Pifagor
             }
             
             Console.Write("|");
-                for (i = firstNumber; i <= secondNumber; i++)
+                for (int i = firstNumberHorizontal; i <= lastNumberHorizontal; i++)
                 {
                   var lenghtI = Convert.ToString(i).Length;
-                  var symbol = secondNumber * fourthNumber;
+                  var symbol = lastNumberHorizontal * lastNumberVertical;
                   var symbolLenght = Convert.ToString(symbol).Length;
                     if (symbolLenght == lenghtI)
                     {
@@ -49,17 +47,17 @@ namespace Pifagor
                     Console.Write(i);
                     }
             Console.Write("\n");
-            var lenthHorizont = Convert.ToString(fourthNumber).Length + 1;
-            while (lenthHorizont > 0)
+            var lenthHorizontal = Convert.ToString(lastNumberVertical).Length + 1;
+            while (lenthHorizontal > 0)
             {
                 Console.Write("-");
-                lenthHorizont--;
+                lenthHorizontal--;
             }
             
             Console.Write("+");
-            for (i = firstNumber; i <= secondNumber; i++)
+            for (int i = firstNumberHorizontal; i <= lastNumberHorizontal; i++)
             {
-                var symbol = secondNumber * fourthNumber;
+                var symbol = lastNumberHorizontal * lastNumberVertical;
                 var symbolLenght = Convert.ToString(symbol).Length + 1;
                 while (symbolLenght > 0)
                 {
@@ -69,10 +67,10 @@ namespace Pifagor
                 
             }
             Console.Write("\n");
-            for (i = thirdNumber; i <= fourthNumber; i++)
+            for (int i = firstNumberVertical; i <= lastNumberVertical; i++)
             {
                 var lenthI = Convert.ToString(i).Length;
-                var lenthForNumber = Convert.ToString(fourthNumber).Length;
+                var lenthForNumber = Convert.ToString(lastNumberVertical).Length;
                 if (lenthI == lenthForNumber)
                 {
                     lenthForNumber = 1;
@@ -88,11 +86,11 @@ namespace Pifagor
                 }
                 
                 Console.Write(i+"|");
-                for (j = firstNumber; j <= secondNumber; j++)
+                for (int j = firstNumberHorizontal; j <= lastNumberHorizontal; j++)
                 {
                     var result = i * j;
                     var resultLenght = Convert.ToString(result).Length;
-                    var symbol = secondNumber * fourthNumber;
+                    var symbol = lastNumberHorizontal * lastNumberVertical;
                     var symbolLenght = Convert.ToString(symbol).Length;
                     if (resultLenght == symbolLenght)
                     {
@@ -111,7 +109,7 @@ namespace Pifagor
                     
                         Console.Write(result);
 
-                    if (j == secondNumber)
+                    if (j == lastNumberHorizontal)
                     {
                         Console.Write("\n");
                     }
