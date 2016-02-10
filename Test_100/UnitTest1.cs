@@ -24,7 +24,7 @@ namespace Test_100
 
             var sr = string.Empty;
 
-            int i, j;
+           
 
             var space = Convert.ToString(10).Length + 1;
             while (space > 0)
@@ -34,7 +34,7 @@ namespace Test_100
             }
 
             sr = sr + ("|");
-            for (i = 1; i <= 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 var lenghtI = Convert.ToString(i).Length;
                 var symbol = 10 * 10;
@@ -56,15 +56,15 @@ namespace Test_100
                 sr = sr + (i);
             }
             sr = sr + ("\n");
-            var lenthHorizont = Convert.ToString(10).Length + 1;
-            while (lenthHorizont > 0)
+            var lenthHorizontal = Convert.ToString(10).Length + 1;
+            while (lenthHorizontal > 0)
             {
                 sr = sr + ("-");
-                lenthHorizont--;
+                lenthHorizontal--;
             }
 
             sr = sr + ("+");
-            for (i = 1; i <= 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 var symbol = 10 * 10;
                 var symbolLenght = Convert.ToString(symbol).Length + 1;
@@ -76,26 +76,26 @@ namespace Test_100
 
             }
             sr = sr + ("\n");
-            for (i = 1; i <= 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 var lenthI = Convert.ToString(i).Length;
-                var lenthForNumber = Convert.ToString(10).Length;
-                if (lenthI == lenthForNumber)
+                var lastNumberVertical = Convert.ToString(10).Length;
+                if (lenthI == lastNumberVertical)
                 {
-                    lenthForNumber = 1;
+                    lastNumberVertical = 1;
                 }
-                else if (lenthI < lenthForNumber)
+                else if (lenthI < lastNumberVertical)
                 {
-                    lenthForNumber = (lenthForNumber - lenthI) + 1;
+                    lastNumberVertical = (lastNumberVertical - lenthI) + 1;
                 }
-                while (lenthForNumber > 0)
+                while (lastNumberVertical > 0)
                 {
                     sr = sr + (" ");
-                    lenthForNumber--;
+                    lastNumberVertical--;
                 }
 
                 sr = sr + (i + "|");
-                for (j = 1; j <= 10; j++)
+                for (int j = 1; j <= 10; j++)
                 {
                     var result = i * j;
                     var resultLenght = Convert.ToString(result).Length;
