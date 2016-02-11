@@ -20,25 +20,21 @@ namespace Pifagor
             if (firstNumberHorizontal < 0)
             {
                 Console.WriteLine("The firstNumberHorizonta isnt above or equally 0");
-                Console.ReadKey();
                 return;
             }
             if (lastNumberHorizontal < 0)
             {
                 Console.WriteLine("The lastNumberHorizonta isnt above or equally 0");
-                Console.ReadKey();
                 return;
             }
             if (firstNumberVertical < 0)
             {
                 Console.WriteLine("The firstNumberVertical isnt above or equally 0");
-                Console.ReadKey();
                 return;
             }
             if (lastNumberVertical < 0)
             {
                 Console.WriteLine("The lastNumberVertical isnt above or equally 0");
-                Console.ReadKey();
                 return;
             }
 
