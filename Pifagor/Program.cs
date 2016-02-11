@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Win32;
 
 namespace Pifagor
 {
@@ -6,7 +7,7 @@ namespace Pifagor
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("You must enter numbers above than 0");
             Console.WriteLine("Enter the first number (horizontal): ");
             var firstNumberHorizontal = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the last number (horizontal): ");
@@ -16,6 +17,30 @@ namespace Pifagor
             Console.WriteLine("Enter the last number (vertical): ");
             var lastNumberVertical = Convert.ToInt32(Console.ReadLine());
 
+            if (firstNumberHorizontal < 0)
+            {
+                Console.WriteLine("The firstNumberHorizonta isnt above or equally 0");
+                Console.ReadKey();
+                return;
+            }
+            if (lastNumberHorizontal < 0)
+            {
+                Console.WriteLine("The lastNumberHorizonta isnt above or equally 0");
+                Console.ReadKey();
+                return;
+            }
+            if (firstNumberVertical < 0)
+            {
+                Console.WriteLine("The firstNumberVertical isnt above or equally 0");
+                Console.ReadKey();
+                return;
+            }
+            if (lastNumberVertical < 0)
+            {
+                Console.WriteLine("The lastNumberVertical isnt above or equally 0");
+                Console.ReadKey();
+                return;
+            }
 
             var space = Convert.ToString(lastNumberVertical).Length + 1;
             while (space > 0)
